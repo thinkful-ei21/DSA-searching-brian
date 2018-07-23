@@ -22,11 +22,15 @@ console.log('2. Array Double');
 function arrayDouble(arr) {
 // base case 
   if (!arr.length) {
-    return;
+    return [];
   }
+
   // recursion
-  // for each element double the value
-  return arr.map(el => el*2);
+  let charDouble = arr[0] * 2;
+  return [charDouble, ...arrayDouble(arr.slice(1))];
+
+  // iterative
+  // return arr.map(el => el*2);
 }
 
 console.log(arrayDouble([3,4,5,6]));
@@ -41,10 +45,7 @@ function stringRev(str){
         return str;
     }
     let firststr = str[0];
-    let revStr = " ";
 
-    
-    
     return stringRev(str.slice(1)) + firststr;
 
     ///stuff
@@ -54,8 +55,17 @@ function stringRev(str){
 
 console.log(stringRev("stuff"));
 
-
-
-
 console.log('+++++++++++++++++++++++++++++++++++++++++');
 console.log('4. triangle');
+
+function triNum(num) {
+  //base case
+  if (num === 1)  {
+    return num;
+  }
+  
+  // recursion
+  return num + (triNum(num - 1));
+}
+
+console.log(triNum(6));
