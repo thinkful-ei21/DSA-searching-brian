@@ -69,3 +69,20 @@ function triNum(num) {
 }
 
 console.log(triNum(6));
+
+console.log('+++++++++++++++++++++++++++++++++++++++++');
+console.log('5. string splitter');
+
+
+function strSplitter(str){
+    //base case
+    if (str.length === 0){
+        return;
+    }
+    let firstEle = str[0];
+    console.log(firstEle);
+    return  firstEle + strSplitter(str.slice(1)) 
+      
+}
+
+console.log(strSplitter('stuff'));
