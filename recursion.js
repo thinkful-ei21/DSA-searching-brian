@@ -1,16 +1,5 @@
 ////week 1 monday jul 23 recursion
 
-// function sumOf(list){
-
-//     if(list.length === 1){
-//         return list[0];
-//     }
-//     return list[0] + sumOf(list.slice(1));
-// }
-
-// let lst = [2,4,6,8];
-// console.log("problem 1")
-// console.log(sumOf(lst));
 
 /////problem 1 recursion drills
 
@@ -42,3 +31,31 @@ function arrayDouble(arr) {
 
 console.log(arrayDouble([3,4,5,6]));
 console.log(arrayDouble([5,30,522,-0.26]));
+
+console.log('+++++++++++++++++++++++++++++++++++++++++');
+console.log('3. reverse string');
+
+function stringRev(str){
+    //base case 
+    if (str.length < 2){
+        return str;
+    }
+    let firststr = str[0];
+    let revStr = " ";
+
+    
+    
+    return stringRev(str.slice(1)) + firststr;
+
+    ///stuff
+    //tuffs
+    //uffst
+}
+
+console.log(stringRev("stuff"));
+
+
+
+
+console.log('+++++++++++++++++++++++++++++++++++++++++');
+console.log('4. triangle');
